@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+          src="https://code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous"></script>
+    <!--no funciona <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>/-->
+    <script type="text/javascript" src="clientsFunctions.js"></script>
+    <title>Salones</title>
+    <link rel = "icon" href="../iconFiesta.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            text-align: center;
+            font-size: 60px;
+            padding: 5px;
+            font-family: 'Leckerli One', cursive;
+            color: rgba(255, 191, 160);
+        }
+        #sticker{
+            text-decoration: none;
+            color: rgba(16, 37, 66);
+            text-align: center;
+            position: -webkit-sticky;
+            position: fixed;
+            top: 0;
+            background-color: #FFB49A;
+            right: 0;
+            padding: 14px 40px;
+            max-width: 450px;
+            z-index: 999;
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            border-radius: 4px;
+        }
+        body{
+            background-color: #0D1F2D;
+            color: white;
+        }
+        hr{
+            height: 5px;
+            background-color: #FFB49A;
+            border-color: #7B7554;
+        }
+        hr:hover{
+            background-color: rgba(248, 112, 96);
+            }
+        table, th,td{
+            border: 1px solid #FFB49A;
+        }
+        td{
+            padding: 8px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif; 
+        }
+        button{
+            font-family: 'Open Sans', sans-serif;
+        }
+        footer{
+            font-family: 'Open Sans', sans-serif;
+            text-align: end;
+        }
+        
+
+    </style>
+</head>
+<body>
+ 
+    <h1>Clientes:</h1>
+    <hr>
+    <br>
+    <p>En esta seccion puede revisar los Clientes por ID, Nombre, Email, 
+        y edad. Puede utilizar el boton de <b><i>Consultar</i></b> para ver 
+        los Cuartos de fiesta, en la parte inferior encontrara el boton de <b><i>Guardar</i></b>, 
+        oprimalo luego de llenar los espacios para agregar un salon puede guardar 
+        algun salon y actualizar uno en especifico luego de dar click en el boton de 
+        <b><i>Detalle</i></b>, despues de actualizar la informacion de click en <b><i>Actualizar</i></b> 
+        si desea borrar alguno de click en <b><i>Eliminar</i></b></p>
+    <br>
+    <hr>
+    <br>
+    <div id="resultado"></div>
+    <button onclick="traerInformacion()">Consultar!</button>
+    <br>
+    <div>
+        <br>
+        <input type="number" id="id" placeholder="Id">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="number" id="age" placeholder="Age">
+    </div>
+    <br>
+    <button onclick="guardarInformacion()">Guardar!</button>
+    <button onclick="editarInformacion()">Actualizar!</button>
+
+    <div id="sticker"><a href="../index.html">Menu</a></div>
+    <footer>
+        <div class="copyright">
+            <p>© 2021 - Jose Albancando Robles</p>
+        </div>
+    </footer> 
+</body>
+</html>
